@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int multi8_bitshift(int x)
+{
+        int result = 0;
+	result = x << 3;
+	return result;
+/*비트이동연산자를 1회 이용하여 x값에 8을 곱한 결과값을 return하는 코드를 작성하시오.*/
+}
+
+void cycle_do(int y, int z)
+{
+             int i = 1;
+	int n;
+
+	scanf_s("%d", &n);
+
+	
+	do {
+		z = y << i;
+		i++;
+	}
+
+	 while (i <= n);
+
+	printf("z = %d\n", z);
+	printf("i = %d", i);
+/*정수 i를 선언하고 정수 n을 입력받아 z= y * 2^n 이 될 수 있도록 do while 반복문과 증감연산자, 비트이동연산자를 
+각각 한 번씩 사용해 코드를 작성하고 이때의 z값을 출력하는 코드를 작성하시오.*/
+}
+
+int main()
+{
+   int a;
+   scanf_s("%d", &a);
+   printf("%d\n", multi8_bitshift(a));
+   
+   int b = 0;
+   cycle_do(a, b);
+
+   return 0;
+}

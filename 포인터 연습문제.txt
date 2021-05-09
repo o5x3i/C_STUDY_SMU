@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+	int my_num = 100;
+	char my_alph = 'A';
+
+	printf("%p\n", &my_num);
+	printf("%p\n", &my_alph);
+
+	int *num_p = &my_num;
+	char* alph_p = &my_alph;
+
+	printf("%p\n", num_p);
+	printf("%p\n", alph_p);
+
+	printf("%p\n", num_p + 1);
+	printf("%p\n", alph_p + 1);
+
+
+	return 0;
+}
